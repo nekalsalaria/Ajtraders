@@ -529,13 +529,15 @@ function Modal({ product, onClose }) {
               </ul>
             </div>
 
-            <a
-              href="/contact"
-              className="block w-full text-center font-bold py-3 rounded-xl text-white transition-colors"
-              style={{ background: product.accent }}
-            >
-              Enquire About This Product
-            </a>
+           <a
+  href="https://wa.me/917889607109"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full text-center font-bold py-3 rounded-xl text-white transition-colors"
+  style={{ background: product.accent }}
+>
+  Enquire About This Product
+</a>
           </div>
         </motion.div>
       </motion.div>
