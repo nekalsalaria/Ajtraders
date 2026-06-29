@@ -1,6 +1,23 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import img1 from "../products/IMG_7596.JPG";
+import img2 from "../products/IMG_7598.JPG";
+import img3 from "../products/IMG_7599.JPG";
+import img4 from "../products/IMG_7600.JPG";
+import img5 from "../products/IMG_7603.JPG";
+import img6 from "../products/IMG_7606.JPG";
+import img7 from "../products/IMG_7608.JPG";
+import img8 from "../products/IMG_7611.JPG";
+import img9 from "../products/IMG_7614.JPG";
+import img10 from "../products/IMG_7615.JPG";
+import img11 from "../products/IMG_7616.JPG";
+import img12 from "../products/IMG_7617.JPG";
+import img13 from "../products/IMG_7618.JPG";
+import img14 from "../products/IMG_7619.JPG";
+
+const WHATSAPP_NUMBER = "917889607109";
+
 const products = [
   // ── EXTERIOR ──────────────────────────────────────────────
   {
@@ -25,6 +42,7 @@ const products = [
     accent: "#7C3AED",
     bg: "from-purple-900/60 to-purple-800/20",
     badge: "bg-purple-600/20 text-purple-400 border-purple-500/30",
+    image: img1,
   },
   {
     id: 2,
@@ -47,6 +65,7 @@ const products = [
     accent: "#BE185D",
     bg: "from-pink-900/60 to-pink-800/20",
     badge: "bg-pink-600/20 text-pink-400 border-pink-500/30",
+    image: img2,
   },
   {
     id: 3,
@@ -69,6 +88,7 @@ const products = [
     accent: "#B91C1C",
     bg: "from-red-900/60 to-red-800/20",
     badge: "bg-red-600/20 text-red-400 border-red-500/30",
+    image: img3,
   },
   {
     id: 4,
@@ -87,6 +107,7 @@ const products = [
     accent: "#C2410C",
     bg: "from-orange-900/60 to-orange-800/20",
     badge: "bg-orange-600/20 text-orange-400 border-orange-500/30",
+    image: img4,
   },
   {
     id: 5,
@@ -109,6 +130,7 @@ const products = [
     accent: "#EA580C",
     bg: "from-orange-900/60 to-amber-800/20",
     badge: "bg-amber-600/20 text-amber-400 border-amber-500/30",
+    image: img5,
   },
   {
     id: 6,
@@ -131,6 +153,7 @@ const products = [
     accent: "#D97706",
     bg: "from-yellow-900/60 to-yellow-800/20",
     badge: "bg-yellow-600/20 text-yellow-400 border-yellow-500/30",
+    image: img6,
   },
   {
     id: 7,
@@ -153,6 +176,7 @@ const products = [
     accent: "#DC2626",
     bg: "from-red-900/60 to-red-700/20",
     badge: "bg-red-600/20 text-red-300 border-red-500/30",
+    image: img7,
   },
 
   // ── INTERIOR ──────────────────────────────────────────────
@@ -178,6 +202,7 @@ const products = [
     accent: "#F59E0B",
     bg: "from-yellow-900/60 to-yellow-700/20",
     badge: "bg-yellow-600/20 text-yellow-400 border-yellow-500/30",
+    image: img8,
   },
   {
     id: 9,
@@ -201,6 +226,7 @@ const products = [
     accent: "#6D28D9",
     bg: "from-violet-900/60 to-violet-700/20",
     badge: "bg-violet-600/20 text-violet-400 border-violet-500/30",
+    image: img9,
   },
   {
     id: 10,
@@ -224,6 +250,7 @@ const products = [
     accent: "#D97706",
     bg: "from-amber-900/60 to-amber-700/20",
     badge: "bg-amber-600/20 text-amber-400 border-amber-500/30",
+    image: img10,
   },
   {
     id: 11,
@@ -247,6 +274,7 @@ const products = [
     accent: "#9333EA",
     bg: "from-purple-900/60 to-purple-700/20",
     badge: "bg-purple-600/20 text-purple-400 border-purple-500/30",
+    image: img11,
   },
   {
     id: 12,
@@ -265,6 +293,7 @@ const products = [
     accent: "#BE185D",
     bg: "from-fuchsia-900/60 to-fuchsia-700/20",
     badge: "bg-fuchsia-600/20 text-fuchsia-400 border-fuchsia-500/30",
+    image: img12,
   },
   {
     id: 13,
@@ -283,6 +312,7 @@ const products = [
     accent: "#0D9488",
     bg: "from-teal-900/60 to-teal-700/20",
     badge: "bg-teal-600/20 text-teal-400 border-teal-500/30",
+    image: img13,
   },
   {
     id: 14,
@@ -301,98 +331,19 @@ const products = [
     accent: "#EA580C",
     bg: "from-orange-900/60 to-orange-700/20",
     badge: "bg-orange-600/20 text-orange-400 border-orange-500/30",
+    image: img14,
   },
-  {
-    id: 15,
-    name: "Bison Emulsion Glow",
-    category: "Interior",
-    series: "Bison",
-    warranty: "—",
-    finish: "Soft Sheen",
-    coverage: "—",
-    dirtRepellence: "—",
-    waterRepellence: "—",
-    antiFungal: "—",
-    description:
-      "Soft sheen version of the popular Bison range offering better coverage and value for money with a subtle glow finish.",
-    usp: ["Soft Sheen", "Better Coverage", "Value For Money"],
-    accent: "#CA8A04",
-    bg: "from-yellow-900/60 to-yellow-700/20",
-    badge: "bg-yellow-600/20 text-yellow-400 border-yellow-500/30",
-  },
-  {
-    id: 16,
-    name: "Easy Clean Silky Touch",
-    category: "Interior",
-    series: "Easy Clean",
-    warranty: "—",
-    finish: "Soft Sheen",
-    coverage: "—",
-    dirtRepellence: "—",
-    waterRepellence: "High",
-    antiFungal: "—",
-    description:
-      "Silky smooth finish with No Crack Technology and superior washability for a pristine and long-lasting interior.",
-    usp: [
-      "Soft Sheen",
-      "Silky Smooth Finish",
-      "No Crack Technology",
-      "Superior Washability",
-    ],
-    accent: "#2563EB",
-    bg: "from-blue-900/60 to-blue-700/20",
-    badge: "bg-blue-600/20 text-blue-400 border-blue-500/30",
-  },
-  {
-    id: 17,
-    name: "Easy Clean Fresh",
-    category: "Interior",
-    series: "Easy Clean",
-    warranty: "—",
-    finish: "Soft Sheen",
-    coverage: "—",
-    dirtRepellence: "—",
-    waterRepellence: "High",
-    antiFungal: "Yes (Anti-Bacterial)",
-    description:
-      "Anti-bacterial soft sheen interior paint with superior washability — ideal for kitchens, bathrooms and children's rooms.",
-    usp: ["Soft Sheen", "Anti-Bacterial", "Superior Washability"],
-    accent: "#059669",
-    bg: "from-emerald-900/60 to-emerald-700/20",
-    badge: "bg-emerald-600/20 text-emerald-400 border-emerald-500/30",
-  },
-  {
-    id: 18,
-    name: "Easy Clean",
-    category: "Interior",
-    series: "Easy Clean",
-    warranty: "—",
-    finish: "Soft Sheen",
-    coverage: "—",
-    dirtRepellence: "—",
-    waterRepellence: "High",
-    antiFungal: "—",
-    description:
-      "Best in class washability interior paint with soft sheen finish — perfect for high-traffic rooms.",
-    usp: ["Soft Sheen", "Best In Class Washability"],
-    accent: "#1D4ED8",
-    bg: "from-blue-900/60 to-indigo-700/20",
-    badge: "bg-indigo-600/20 text-indigo-400 border-indigo-500/30",
-  },
+  
 ];
 
 const CATEGORIES = ["All", "Interior", "Exterior"];
 
-function StatPill({ label, value }) {
-  return (
-    <div className="bg-zinc-800 rounded-lg px-3 py-2 text-center">
-      <div className="text-zinc-500 text-xs">{label}</div>
-      <div className="text-white text-sm font-bold mt-0.5">{value || "—"}</div>
-    </div>
-  );
+function buildWhatsappLink(product) {
+  const text = `Hello AJ Traders, I'm interested in ${product.name}.`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
-function ProductCard({ product, onClick }) {
+function ProductCard({ product }) {
   return (
     <motion.div
       layout
@@ -400,154 +351,47 @@ function ProductCard({ product, onClick }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.92 }}
       transition={{ duration: 0.35 }}
-      onClick={() => onClick(product)}
-      className={`cursor-pointer rounded-2xl border border-zinc-800 hover:border-zinc-600 bg-linear-to-br ${product.bg} bg-zinc-900 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl`}
+      className="rounded-2xl border border-zinc-800 hover:border-zinc-600 bg-zinc-900 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl flex flex-col"
     >
       {/* Accent bar */}
       <div className="h-1" style={{ background: product.accent }} />
 
-      <div className="p-5">
-        <div className="flex items-center justify-between mb-3">
-          <span
-            className={`text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${product.badge}`}
-          >
-            {product.series}
-          </span>
-          {product.warranty !== "—" && (
-            <span className="text-xs text-zinc-400 font-medium">
-              {product.warranty} warranty
-            </span>
-          )}
-        </div>
+      {/* Product image */}
+      <div className="w-full aspect-square bg-white">
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-contain p-3"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-zinc-400 text-sm">
+            Image coming soon
+          </div>
+        )}
+      </div>
 
-        <h3 className="text-white font-black text-lg leading-tight mb-2">
+      <div className="p-4 flex flex-col gap-3 grow">
+        <h3 className="text-white font-bold text-base leading-tight text-center">
           {product.name}
         </h3>
-        <p className="text-zinc-400 text-sm leading-relaxed line-clamp-2 mb-4">
-          {product.description}
-        </p>
 
-        <div className="grid grid-cols-3 gap-2 mb-4">
-          <StatPill label="Finish" value={product.finish} />
-          <StatPill label="Dirt Rep." value={product.dirtRepellence} />
-          <StatPill label="Water Rep." value={product.waterRepellence} />
-        </div>
-
-        <button
-          className="w-full text-sm font-semibold py-2 rounded-xl border transition-colors"
-          style={{
-            borderColor: product.accent + "55",
-            color: product.accent,
-            background: product.accent + "15",
-          }}
+        <a
+          href={buildWhatsappLink(product)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto block w-full text-center text-sm font-bold py-3 rounded-xl text-white transition-colors"
+          style={{ background: product.accent }}
         >
-          View Details
-        </button>
+          Buy This Product
+        </a>
       </div>
     </motion.div>
   );
 }
 
-function Modal({ product, onClose }) {
-  if (!product) return null;
-
-  return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8 bg-black/80 backdrop-blur-sm"
-        onClick={onClose}
-      >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0, y: 30 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.95, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={(e) => e.stopPropagation()}
-          className="bg-zinc-900 border border-zinc-700 rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto"
-        >
-          {/* Modal header */}
-          <div className="h-2 rounded-t-3xl" style={{ background: product.accent }} />
-          <div className="p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <span
-                  className={`text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full border ${product.badge}`}
-                >
-                  {product.category} · {product.series}
-                </span>
-                <h2 className="text-white font-black text-2xl mt-3 leading-tight">
-                  {product.name}
-                </h2>
-              </div>
-              <button
-                onClick={onClose}
-                className="text-zinc-500 hover:text-white text-2xl ml-4 leading-none"
-              >
-                ×
-              </button>
-            </div>
-
-            <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-              {product.description}
-            </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-3 mb-6">
-              {[
-                { label: "Finish", value: product.finish },
-                { label: "Warranty", value: product.warranty },
-                { label: "Dirt Repellence", value: product.dirtRepellence },
-                { label: "Water Repellence", value: product.waterRepellence },
-                { label: "Anti-Fungal", value: product.antiFungal },
-                { label: "Coverage", value: product.coverage },
-              ].map((s) => (
-                <div key={s.label} className="bg-zinc-800 rounded-xl p-3">
-                  <div className="text-zinc-500 text-xs">{s.label}</div>
-                  <div className="text-white font-bold text-sm mt-1">{s.value || "—"}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* USPs */}
-            <div className="mb-6">
-              <h4
-                className="text-sm font-bold uppercase tracking-wider mb-3"
-                style={{ color: product.accent }}
-              >
-                Key Features (USP)
-              </h4>
-              <ul className="space-y-2">
-                {product.usp.map((u) => (
-                  <li key={u} className="flex items-start gap-2 text-sm text-zinc-300">
-                    <span style={{ color: product.accent }} className="mt-0.5 shrink-0">✓</span>
-                    {u}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-           <a
-  href="https://wa.me/917889607109"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block w-full text-center font-bold py-3 rounded-xl text-white transition-colors"
-  style={{ background: product.accent }}
->
-  Enquire About This Product
-</a>
-          </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
-
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [activeProduct, setActiveProduct] = useState(null);
   const [search, setSearch] = useState("");
 
   const filtered = products.filter((p) => {
@@ -639,7 +483,7 @@ export default function Products() {
           >
             <AnimatePresence>
               {filtered.map((p) => (
-                <ProductCard key={p.id} product={p} onClick={setActiveProduct} />
+                <ProductCard key={p.id} product={p} />
               ))}
             </AnimatePresence>
           </motion.div>
@@ -652,11 +496,6 @@ export default function Products() {
           )}
         </div>
       </section>
-
-      {/* Modal */}
-      {activeProduct && (
-        <Modal product={activeProduct} onClose={() => setActiveProduct(null)} />
-      )}
     </main>
   );
 }

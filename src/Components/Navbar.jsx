@@ -296,8 +296,8 @@ export default function Navbar() {
 
               {/* Footer */}
               <div style={{ padding: "16px 16px 32px", display: "flex", flexDirection: "column", gap: "10px" }}>
-                <a href="tel:+919419100000" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", background: "#dc2626", color: "white", fontWeight: 700, padding: "12px", borderRadius: "12px", textDecoration: "none", fontSize: "14px" }}>📞 Call Now</a>
-                <a href="https://wa.me/919419100000" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", background: "#16a34a", color: "white", fontWeight: 700, padding: "12px", borderRadius: "12px", textDecoration: "none", fontSize: "14px" }}>💬 WhatsApp</a>
+                <a href="tel:+917889607109" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", background: "#dc2626", color: "white", fontWeight: 700, padding: "12px", borderRadius: "12px", textDecoration: "none", fontSize: "14px" }}>📞 Call Now</a>
+                <a href="https://wa.me/917889607109" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", background: "#16a34a", color: "white", fontWeight: 700, padding: "12px", borderRadius: "12px", textDecoration: "none", fontSize: "14px" }}>💬 WhatsApp</a>
                 <p style={{ color: "#52525b", fontSize: "11px", textAlign: "center", margin: 0 }}>Chandwan, Chadwal · Kathua, J&K</p>
               </div>
             </motion.div>

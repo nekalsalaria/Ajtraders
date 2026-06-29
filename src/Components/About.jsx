@@ -223,11 +223,13 @@ export default function About() {
           <h2 className="text-3xl font-black text-white mb-4">Ready to start your project?</h2>
           <p className="text-zinc-400 mb-8">Visit us at Chandwan, Chadwal or call us — we are happy to help.</p>
           <a
-            href="/contact"
-            className="inline-block bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-3 rounded-xl transition-colors"
-          >
-            Get In Touch
-          </a>
+           href="https://wa.me/917889607109?text=Hi%2C%20I%27m%20interested%20in%20starting%20a%20project."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-red-600 hover:bg-red-500 text-white font-bold px-10 py-3 rounded-xl transition-colors"
+>
+  Get In Touch
+</a>
         </motion.div>
       </section>
     </main>
